@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { useState } from "react";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
-import { styles } from '../../styles/Help';
-import { useRouter } from 'expo-router';
+import { styles } from "../../styles/HelpStyle";
+import { useRouter } from "expo-router";
 
 export default function Help() {
   const [call, setCall] = useState({
-    quem: '',
-    porQue: '',
-    algoMais: ''
-  })
+    quem: "",
+    porQue: "",
+    algoMais: "",
+  });
 
-  const router = useRouter()
+  const router = useRouter();
 
   const callBatSignal = () => {
-    router.push({ pathname: '/Home', params: call })
-  }
+    router.push({ pathname: "/Home", params: call });
+  };
 
   return (
     <View style={styles.container}>

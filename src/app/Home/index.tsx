@@ -1,29 +1,20 @@
-import React from 'react';
-import { Button, Text, View } from 'react-native';
-import { styles } from '../../styles/Home';
-import { useLocalSearchParams, useRouter } from 'expo-router';
-import { Call } from '../../models/call';
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
-const router = useRouter()
+import { styles } from "../../styles/HomeStyle";
+import batsinal from "../../../assets/batsignal.png";
+import { useState } from "react";
 
-const askHelp = () => {
-  router.navigate('/Help')
-}
-
-export default function Home() {
-  const call = useLocalSearchParams<Call>()
+export function Home() {
+  const [hidden, setHidden] = useState(false);
 
   return (
     <View style={styles.container}>
-      {
-        call.quem &&
-        <View>
-          <Text>{call.quem}</Text>
-          <Text>{call.porQue}</Text>
-          <Text>{call.algoMais}</Text>
-        </View>
-      }
-      <Button title='Help por favor' onPress={askHelp} />
+      <View style={[styles.imageContainer, hidden ? styles.hidden : null]}>
+        <Image style={styles.image} source={batsinal} />
+      </View>
+      <TouchableOpacity>
+        <Text style={styles.button}>Batmaaan, Heeelp 🦇</Text>
+      </TouchableOpacity>
     </View>
   );
 }
