@@ -3,9 +3,10 @@ import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
 import { styles } from "../../styles/HelpStyle";
 import { useRouter } from "expo-router";
+import { Call } from "../../models/call";
 
 export default function Help() {
-  const [call, setCall] = useState({
+  const [call, setCall] = useState<Call>({
     quem: "",
     porQue: "",
     algoMais: "",

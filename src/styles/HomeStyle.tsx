@@ -1,12 +1,13 @@
 import { StyleSheet } from "react-native";
+import { colors } from "./colors";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#000",
-    gap: 200,
+    backgroundColor: colors.black,
+    gap: 100,
   },
   hidden: {
     display: "none",
@@ -28,13 +29,27 @@ export const styles = StyleSheet.create({
   },
   button: {
     fontSize: 25,
-    backgroundColor: "#524d4d",
-    color: "#e1ff00",
+    backgroundColor: colors.gray,
+    color: colors.yellow,
     alignItems: "center",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 50,
-    borderColor: "#e1ff00",
+    borderColor: colors.yellow,
     borderWidth: 1,
+  },
+  text: {
+    color: colors.yellow,
+    fontSize: 20,
+  },
+  textContainer: {
+    flexDirection: "column",
+    flexWrap: "wrap",
+    alignItems: "center",
+    gap: 15,
+    borderWidth: 1,
+    borderRadius: 15,
+    borderColor: colors.yellow,
+    padding: 25,
   },
 });
