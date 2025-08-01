@@ -20,7 +20,7 @@ export default function Help() {
   return (
     <View style={styles.container}>
       <View style={styles.inputGroup}>
-        <Text>Quem pede?</Text>
+        <Text style={styles.textLabel}>Quem pede?</Text>
         <TextInput
           style={styles.inputText}
           value={call.quem}
@@ -28,7 +28,7 @@ export default function Help() {
         />
       </View>
       <View style={styles.inputGroup}>
-        <Text>Por que?</Text>
+        <Text style={styles.textLabel}>Por que?</Text>
         <TextInput
           multiline={true}
           numberOfLines={4}
@@ -39,7 +39,7 @@ export default function Help() {
         />
       </View>
       <View style={styles.inputGroup}>
-        <Text>Algo mais?</Text>
+        <Text style={styles.textLabel}>Algo mais?</Text>
         <TextInput
           multiline={true}
           numberOfLines={4}
@@ -49,8 +49,8 @@ export default function Help() {
           onChangeText={(e) => setCall({ ...call, algoMais: e })}
         />
       </View>
-      <TouchableOpacity onPress={callBatSignal}>
-        <Text>Chamar o Batman 🦇</Text>
+      <TouchableOpacity onPress={callBatSignal} style={styles.button}>
+        <Text style={styles.textLabel}>Chamar o Batman 🦇</Text>
       </TouchableOpacity>
     </View>
   );
