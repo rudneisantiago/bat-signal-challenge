@@ -1,10 +1,11 @@
-import { Animated, Image, Text, TouchableOpacity, View } from "react-native";
+import { Animated, Image, Text, View } from "react-native";
 import { useEffect, useRef, useState } from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
 
 import { styles } from "../../styles/HomeStyle";
 import { Call } from "../../models/call";
 import batsinal from "../../../assets/batsignal.png";
+import { Button } from "../../components/Button";
 
 export default function Home() {
   const [imageHidden, setImageHidden] = useState(true);
@@ -88,9 +89,7 @@ export default function Home() {
         </Animated.View>
       )}
       {textHidden && (
-        <TouchableOpacity onPress={askForHelp}>
-          <Text style={styles.button}>Batmaaan, Heeelp 🦇</Text>
-        </TouchableOpacity>
+        <Button label="Batmaaan, Heeelp" onPress={askForHelp} />
       )}
     </View>
   );

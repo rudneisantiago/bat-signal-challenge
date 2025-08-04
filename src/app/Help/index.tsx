@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, View } from "react-native";
 
 import { styles } from "../../styles/HelpStyle";
 import { useRouter } from "expo-router";
 import { Call } from "../../models/call";
+import { Button } from "../../components/Button";
 
 export default function Help() {
   const [call, setCall] = useState<Call>({
@@ -50,9 +51,7 @@ export default function Help() {
           onChangeText={(e) => setCall({ ...call, algoMais: e })}
         />
       </View>
-      <TouchableOpacity onPress={callBatSignal} style={styles.button}>
-        <Text style={styles.textLabel}>Chamar o Batman 🦇</Text>
-      </TouchableOpacity>
+      <Button label="Chamar o Batman" onPress={callBatSignal} />
     </View>
   );
 }

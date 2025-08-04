@@ -30,11 +30,4 @@ export const styles = StyleSheet.create({
   inputMultline: {
     minHeight: 100,
   },
-  button: {
-    backgroundColor: colors.gray,
-    padding: 20,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: colors.yellow,
-  },
 });
